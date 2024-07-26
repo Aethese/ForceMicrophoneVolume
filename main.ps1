@@ -23,6 +23,7 @@ $iteration = 0
 $runTime = 4 # in hours
 Write-Output "Setting microphone value to $volumeLevel% for $runTime hour(s). Press ctrl+c to stop the script early"
 
+# hours -> minutes -> ms
 while ($iteration -lt ($runTime * 60 / 0.5)) {
 	Set-AudioDevice -RecordingCommunicationVolume $volumeLevel
 	$iteration += 1
