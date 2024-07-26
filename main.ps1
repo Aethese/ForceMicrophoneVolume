@@ -4,7 +4,7 @@ Import-Module $scriptDir\Modules\AudioDeviceCmdlets\3.1.0.2\AudioDeviceCmdlets.p
 #$micID = "{0.0.1.00000000}.{5498d77b-7301-486e-8168-8c43a626ef60}"
 
 Write-Output "Select by Index which microphone you'd like to change:"
-Start-Sleep 1
+Start-Sleep -Seconds 1
 Get-AudioDevice -List
 $index = Read-Host "Index"
 
@@ -19,4 +19,14 @@ try {
 Set-AudioDevice -Id $deviceID # select mic
 Set-AudioDevice -RecordingCommunicationVolume 100 # change volume
 
-Write-Output "Set microphone value to 100%"
+Write-Output "Setting microphone value to 100%. Press ctrl+c to stop the script"
+
+$iteration = 0
+$runTime = 4 # in hours
+while ($iteration -lt ($runTime * 60 / 0.5)) {
+	Set-AudioDevice -RecordingCommunicationVolume 100 # change volume
+	$iteration += 1
+	Start-Sleep -Milliseconds 500
+}
+
+Write-Output "Stopped running after $runTime hour(s)"
