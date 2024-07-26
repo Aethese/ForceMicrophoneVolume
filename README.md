@@ -1,5 +1,5 @@
 # Force Microphone Volume
-Force your global microphone volume to stay at your desired volume level. Hopeful when apps force automatic voice control with no way of turning it off.
+Forces your global microphone volume on Windows to stay at your desired volume level. Helpful when apps force automatic voice control with no way of turning it off.
 
 ## Installation
 You will need to install the AudioDeviceCmdlets module by running `Install-Module -Name AudioDeviceCmdlets` as administrator.
