@@ -2,7 +2,7 @@
 Forces your global microphone volume on Windows to stay at your desired volume level. Helpful when apps force automatic voice control with no way of turning it off.
 
 ## Installation
-You will need to install the AudioDeviceCmdlets module by running `Install-Module -Name AudioDeviceCmdlets` as administrator.
+You will need to install the [AudioDeviceCmdlets](https://github.com/frgnca/AudioDeviceCmdlets) module by running `Install-Module -Name AudioDeviceCmdlets` in Powershell as administrator.
 
 I personally placed the module inside of this directory to fix some issues I was having. If you don't do this approach, you will need to change the import-module path, possible to just `Import-Module AudioDeviceCmdlets`
 
