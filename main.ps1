@@ -11,8 +11,8 @@ catch [System.IO.FileNotFoundException]
 }
 
 # handle volume level
-$userInput = Read-Host "Your preferred volume level (as a percentage)"
-$volumeLevel = $userInput -as [int] # conver to int
+$userInput = Read-Host "Your preferred volume level (as a percentage number)"
+$volumeLevel = $userInput -as [int] # convert to int
 
 if ($volumeLevel -isnot [int])
 {
